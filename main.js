@@ -1,14 +1,10 @@
 // phina.js をグローバル領域に展開
 phina.globalize()
 
-// MainScene クラスを定義
-
 // メイン処理
 phina.main(function() {
   // アプリケーション生成
-  var app = GameApp({
-    startLabel: 'main' // メインシーンから開始する
-  })
+  var app = GameApp({})
   // アプリケーション実行
   app.run()
 })
