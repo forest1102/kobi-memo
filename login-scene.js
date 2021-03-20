@@ -38,16 +38,15 @@ phina.define('LoginScene', {
     })
       .addChildTo(this)
       .setPosition(this.gridX.center(), this.gridY.center() * 1.7)
-    //ボタンが押された時の処理
-    button.onpointend = () => {
-      this.exit({
-        assets: {
-          image: {
-            face_1:
-              'https://rawgit.com/phinajs/phina.js/develop/assets/images/tomapiko.png'
+    const updateSigninStatus = isSignedIn => {
+      if (isSignedIn) {
+        this.exit({
+          assets: {
+            image: {}
           }
-        }
-      })
+        })
+      } else {
+      }
     }
     gapi.load('client:auth2', () => {
       gapi.client
@@ -61,24 +60,15 @@ phina.define('LoginScene', {
           () => {
             // Listen for sign-in state changes.
 
+            gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus)
+            updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get())
             // Handle the initial sign-in state.
-            button.onpointend = handleAuthClick
+            button.onpointend = gapi.auth2.getAuthInstance().signIn()
           },
           function(error) {
             console.log(error)
           }
         )
     })
-    //ボタンが押された時の処理
-    // button.onpointend = () => {
-    //   this.exit({
-    //     assets: {
-    //       image: {
-    //         face_2:
-    //           'https://rawgit.com/phinajs/phina.js/develop/assets/images/tomapiko.png'
-    //       }
-    //     }
-    //   })
-    // }
   }
 })
