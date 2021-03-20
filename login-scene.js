@@ -2,6 +2,8 @@ phina.define('LoginScene', {
   superClass: 'DisplayScene',
   init(option) {
     this.superInit(option)
+  init() {
+    this.superInit()
     // 背景色を指定
     this.backgroundColor = '#444'
     // ラベルを生成
