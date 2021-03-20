@@ -1,5 +1,7 @@
 phina.define('LoginScene', {
   superClass: 'DisplayScene',
+  init(option) {
+    this.superInit(option)
   init() {
     this.superInit()
     // 背景色を指定
@@ -12,7 +14,7 @@ phina.define('LoginScene', {
       fontFamily: "'Consolas', 'Monaco', 'ＭＳ ゴシック'" //フォント
     })
       .addChildTo(this)
-      .setPosition(320, 400)
+      .setPosition(this.gridX.center(), this.gridY.center())
 
     //ボタンの設定
     var button = Button({
