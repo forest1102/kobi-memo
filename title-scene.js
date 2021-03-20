@@ -57,14 +57,16 @@ phina.define('TitleScene', {
     //ボタンの設定
     let button = Button({
       width: 200, // 横サイズ
-      height: 40, // 縦サイズ
+      height: 35, // 縦サイズ
       text: '\t\t\tこびをうる', // 表示文字
       fontSize: 24, // 文字サイズ
       fontColor: 'black', // 文字色
       cornerRadius: 10, // 角丸み
       fill: '#FFDDD2', // ボタン色
       stroke: 'black', // 枠色
-      strokeWidth: 5 // 枠太さ
+      strokeWidth: 5, // 枠太さ
+      fontFamily: "'Consolas', 'Monaco', 'あさご本丸ゴシックmini'", //フォント
+
     }).addChildTo(this).setPosition(this.gridX.center(), this.gridY.center() * 1.7)
 
     Label({
