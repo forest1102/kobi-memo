@@ -25,7 +25,7 @@ phina.define('LoginScene', {
       fill: 'skyblue', // ボタン色
       stroke: 'pink', // 枠色
       strokeWidth: 5 // 枠太さ
-    }).addChildTo(this).setPosition(this.gridX.center(), this.gridY.center())
+    }).addChildTo(this).setPosition(this.gridX.center(), this.gridY.center()*1.7)
     //ボタンが押された時の処理
     button.onpointend = () => {
       this.exit({
