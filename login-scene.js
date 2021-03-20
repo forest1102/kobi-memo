@@ -7,9 +7,13 @@ phina.define('LoginScene', {
 
     // Array of API discovery doc URLs for APIs used by the quickstart
     var DISCOVERY_DOCS = [
-      'https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'
+      'https://www.googleapis.com/discovery/v1/apis/drive/v3/rest',
+      'https://sheets.googleapis.com/$discovery/rest?version=v4'
     ]
-    var SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly'
+    var SCOPES = [
+      'https://www.googleapis.com/auth/drive.metadata.readonly',
+      'https://www.googleapis.com/auth/spreadsheets.readonly'
+    ].join(' ')
 
     this.superInit(option)
     // 背景色を指定
@@ -25,7 +29,7 @@ phina.define('LoginScene', {
       .setPosition(this.gridX.center(), this.gridY.center())
 
     //ボタンの設定
-    var button = Button({
+    var button_login = Button({
       width: 150, // 横サイズ
       height: 100, // 縦サイズ
       text: 'ログイン', // 表示文字
@@ -40,14 +44,14 @@ phina.define('LoginScene', {
       .setPosition(this.gridX.center(), this.gridY.center() * 1.7)
     const updateSigninStatus = isSignedIn => {
       if (isSignedIn) {
-        this.exit({
-          assets: {
-            image: {}
-          }
-        })
+        this.exit()
       } else {
       }
     }
+    function handleAuthClick(event) {
+      gapi.auth2.getAuthInstance().signIn()
+    }
+
     gapi.load('client:auth2', () => {
       gapi.client
         .init({
@@ -63,9 +67,9 @@ phina.define('LoginScene', {
             gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus)
             updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get())
             // Handle the initial sign-in state.
-            button.onpointend = gapi.auth2.getAuthInstance().signIn()
+            button_login.onpointend = handleAuthClick
           },
-          function(error) {
+          error => {
             console.log(error)
           }
         )
