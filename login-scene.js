@@ -38,8 +38,16 @@ phina.define('LoginScene', {
     })
       .addChildTo(this)
       .setPosition(this.gridX.center(), this.gridY.center() * 1.7)
-    handleAuthClick = () => {
-      gapi.auth2.getAuthInstance().signIn()
+    //ボタンが押された時の処理
+    button.onpointend = () => {
+      this.exit({
+        assets: {
+          image: {
+            face_1:
+              'https://rawgit.com/phinajs/phina.js/develop/assets/images/tomapiko.png'
+          }
+        }
+      })
     }
     gapi.load('client:auth2', () => {
       gapi.client

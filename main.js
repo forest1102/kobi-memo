@@ -29,11 +29,11 @@ phina.main(function() {
       {
         className: 'LoginScene',
         label: 'login',
-        nextLabel: 'loading'
+        nextLabel: 'myloading'
       },
       {
-        className: 'LoadingScene',
-        label: 'loading',
+        className: 'MyLoadingScene',
+        label: 'myloading',
         nextLabel: 'main'
       },
       {
