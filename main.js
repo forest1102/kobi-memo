@@ -18,9 +18,12 @@ phina.main(function () {
       image: {
         faceback: 'main_back.png',
         man: 'main_man.png',
-        woman: 'main_woman.png'
+        woman: 'main_woman.png',
+        title1:
+          'buisiness_people.jpeg',
+        title2:
+          'buildings.png'
       },
-
     },
     scenes: [
       {
