@@ -5,12 +5,6 @@ phina.globalize()
 var SCREEN_X = 640
 var SCREEN_Y = 360
 
-// var ASSETS = {
-//   image: {
-//     'tomapiko': 'https://rawgit.com/phinajs/phina.js/develop/assets/images/tomapiko.png'
-//   },
-// }
-
 // メイン処理
 phina.main(function () {
   // アプリケーション生成
@@ -19,26 +13,28 @@ phina.main(function () {
     //screenのサイズ変更
     width: SCREEN_X,
     height: SCREEN_Y,
+    assets: {
+      image: {
+        title1:
+          'buisiness_people.jpeg',
+        title2:
+          'buildings.png'
+      },
+    },
     scenes: [
       {
         className: 'TitleScene',
         label: 'title',
-        assets: {
-          image: {
-            tomapiko:
-              'https://rawgit.com/phinajs/phina.js/develop/assets/images/tomapiko.png'
-          }
-        },
         nextLabel: 'login'
       },
       {
         className: 'LoginScene',
         label: 'login',
-        nextLabel: 'loading'
+        nextLabel: 'myloading'
       },
       {
-        className: 'LoadingScene',
-        label: 'loading',
+        className: 'MyLoadingScene',
+        label: 'myloading',
         nextLabel: 'main'
       },
       {

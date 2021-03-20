@@ -5,9 +5,15 @@ phina.define('TitleScene', {
     // 背景色を指定
     this.backgroundColor = '#EDF6F9'
     // スプライト画像作成
-    // Sprite('tomapiko')
-    //   .addChildTo(this)
-    //   .setPosition(this.gridX.center(), this.gridY.center())
+    Sprite('title1')
+      .addChildTo(this)
+      .setPosition(this.gridX.center(), this.gridY.center())
+      .setScale(0.2, 0.2)
+    Sprite('title2')
+      .addChildTo(this)
+      .setPosition(this.gridX.center()*1.7, this.gridY.center()*1.5)
+      .setScale(0.2, 0.25)
+    
     // ラベルを生成
     Label({
       text: 'こびうり', //テキスト内容
@@ -35,12 +41,11 @@ phina.define('TitleScene', {
         text: 'メモリアル', //テキスト内容
         fontSize: 50, //文字サイズ
         fill: '#E29578', //文字塗りつぶし色
-        fontFamily: "'Consolas', 'Monaco', 'あさご本丸ゴシックmini'", //フォント  
+        fontFamily: "'Consolas', 'Monaco', 'あさご本丸ゴシックmini'", //フォント
       })
         .addChildTo(this)
         .setPosition(this.gridX.center()*0.49, this.gridY.center()*0.59)
         .setRotation(340)
-  
 
     Label({
       text: 'メモリアル', //テキスト内容
@@ -67,7 +72,7 @@ phina.define('TitleScene', {
       strokeWidth: 5, // 枠太さ
       fontFamily: "'Consolas', 'Monaco', 'あさご本丸ゴシックmini'", //フォント
 
-    }).addChildTo(this).setPosition(this.gridX.center(), this.gridY.center() * 1.7)
+    }).addChildTo(this).setPosition(this.gridX.center(), this.gridY.center() * 1.75)
 
     Label({
       text: '▶️', //テキスト内容
@@ -76,7 +81,7 @@ phina.define('TitleScene', {
       fontFamily: "'Consolas', 'Monaco', ''", //フォント
       stroke: 'black',
       strokeWidth: 4
-    }).addChildTo(this).setPosition(this.gridX.center()*0.8, this.gridY.center() * 1.71)
+    }).addChildTo(this).setPosition(this.gridX.center()*0.8, this.gridY.center() * 1.76)
 
 
 
