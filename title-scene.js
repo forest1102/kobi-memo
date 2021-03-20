@@ -1,7 +1,7 @@
 phina.define('TitleScene', {
   superClass: 'DisplayScene',
-  init() {
-    this.superInit()
+  init(option) {
+    this.superInit(option)
     // 背景色を指定
     this.backgroundColor = '#444'
     // ラベルを生成
@@ -12,14 +12,14 @@ phina.define('TitleScene', {
       fontFamily: "'Consolas', 'Monaco', 'ＭＳ ゴシック'" //フォント
     })
       .addChildTo(this)
-      .setPosition(320, 400)
+      .setPosition(this.gridX.center(), this.gridY.center())
 
     //ボタンの設定
     var button = Button({
       x: 320, // x座標
-      y: 600, // y座標
-      width: 150, // 横サイズ
-      height: 100, // 縦サイズ
+      y: 250, // y座標
+      width: 130, // 横サイズ
+      height: 80, // 縦サイズ
       text: 'スタート', // 表示文字
       fontSize: 32, // 文字サイズ
       fontColor: 'white', // 文字色
