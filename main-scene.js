@@ -8,12 +8,14 @@ phina.define('MainScene', {
     sprite.setPosition(this.gridX.center(), this.gridY.center())
     sprite.setScale(0.5, 0.5)
     sprite.alpha = 0
-    var expand = Tweener().scaleTo(1.0, 1000)
-    var fadeIn = Tweener().fade(1.0, 1000)
-    expand.attachTo(sprite)
-    fadeIn.attachTo(sprite)
-    sprite.tweener.wait(3000)
-    sprite.tweener.scaleTo(5.0, 3000).play()
+    sprite.tweener
+      .to({
+        scaleX: 1.0,
+        scaleY: 1.0,
+        alpha: 1.0
+      }, 400)
+      .wait(3000)
+      .scaleTo(5.0, 5000)
 
     // for(person of option.people){
     //   Sprite(person.image)
