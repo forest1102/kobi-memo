@@ -16,8 +16,6 @@ phina.define('LoginScene', {
 
     //ボタンの設定
     var button = Button({
-      x: 320, // x座標
-      y: 600, // y座標
       width: 150, // 横サイズ
       height: 100, // 縦サイズ
       text: 'ログイン', // 表示文字
@@ -27,7 +25,7 @@ phina.define('LoginScene', {
       fill: 'skyblue', // ボタン色
       stroke: 'pink', // 枠色
       strokeWidth: 5 // 枠太さ
-    }).addChildTo(this)
+    }).addChildTo(this).setPosition(this.gridX.center(), this.gridY.center()*1.7)
     //ボタンが押された時の処理
     button.onpointend = () => {
       this.exit({
