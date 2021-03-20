@@ -3,7 +3,7 @@ phina.define('MainScene', {
   init(option) {
     // 親クラス初期化
     this.superInit(option)
-    var sprite = Sprite('face_2')
+    var sprite = Sprite('faceback')
     sprite.addChildTo(this)
     sprite.setPosition(this.gridX.center(), this.gridY.center())
     sprite.setScale(0.5, 0.5)
@@ -22,3 +22,5 @@ phina.define('MainScene', {
     // }
   }
 })
+
+
