@@ -9,7 +9,7 @@ phina.define('LoginScene', {
       text: 'ログイン', //テキスト内容
       fontSize: 64, //文字サイズ
       fill: 'pink', //文字塗りつぶし色
-      fontFamily: "'Consolas', 'Monaco', 'ＭＳ ゴシック'" //フォント
+      fontFamily: "'Consolas', 'Monaco', 'あさご本丸ゴシックmini'" //フォント
     })
       .addChildTo(this)
       .setPosition(this.gridX.center(), this.gridY.center())
@@ -20,10 +20,10 @@ phina.define('LoginScene', {
       height: 100, // 縦サイズ
       text: 'ログイン', // 表示文字
       fontSize: 32, // 文字サイズ
-      fontColor: 'white', // 文字色
+      fontColor: 'black', // 文字色
       cornerRadius: 10, // 角丸み
       fill: 'skyblue', // ボタン色
-      stroke: 'pink', // 枠色
+      stroke: 'black', // 枠色
       strokeWidth: 5 // 枠太さ
     }).addChildTo(this).setPosition(this.gridX.center(), this.gridY.center()*1.7)
     //ボタンが押された時の処理
