@@ -32,8 +32,6 @@ phina.define('LoginScene', {
         assets: {
           image: {
             face_1:
-              'https://rawgit.com/phinajs/phina.js/develop/assets/images/nasupiyo.png',
-            face_2:
               'https://rawgit.com/phinajs/phina.js/develop/assets/images/tomapiko.png'
           }
         }
