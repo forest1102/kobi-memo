@@ -4,26 +4,24 @@ phina.globalize()
 //サイズ指定用の定数
 var SCREEN_X = 640
 var SCREEN_Y = 360
-// アセット
-var ASSETS = {
-  // 顔画像の背景
-  image: {
-    'faceback': 'main_back.png',
-    'man' : 'main_man.png',
-    'woman' : 'main_woman.png'
-  },
 
-};
 
 // メイン処理
-phina.main(function() {
+phina.main(function () {
   // アプリケーション生成
   var app = GameApp({
     startLabel: 'title',
     //screenのサイズ変更
     width: SCREEN_X,
     height: SCREEN_Y,
-    assets: ASSETS,
+    assets: {
+      image: {
+        faceback: 'main_back.png',
+        man: 'main_man.png',
+        woman: 'main_woman.png'
+      },
+
+    },
     scenes: [
       {
         className: 'TitleScene',
