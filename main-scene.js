@@ -25,3 +25,20 @@ phina.define('MainScene', {
     // }
   }
 })
+
+
+// アセット
+var ASSETS = {
+  // 顔画像の背景
+  image: {
+    'faceback': 'https://rawgit.com/phi-jp/phina.js/develop/assets/images/tomapiko.png',
+  },
+  // お姉さん画像
+  image: {
+    'woman': 'https://rawgit.com/phi-jp/phina.js/develop/assets/images/tomapiko.png',
+  },
+  // おじさん画像
+  image: {
+    'man': 'https://rawgit.com/phi-jp/phina.js/develop/assets/images/tomapiko.png',
+  },
+};
