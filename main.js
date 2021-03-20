@@ -3,6 +3,7 @@ phina.globalize()
 //サイズ指定用の定数
 var SCREEN_X = 640
 var SCREEN_Y = 360
+
 // メイン処理
 phina.main(function() {
   // アプリケーション生成
@@ -13,8 +14,11 @@ phina.main(function() {
     height: SCREEN_Y,
     assets: {
       image: {
-        tomapiko:
-          'https://rawgit.com/phinajs/phina.js/develop/assets/images/tomapiko.png'
+        faceback: 'main_back.png',
+        man: 'main_man.png',
+        woman: 'main_woman.png',
+        title1: 'buisiness_people.jpeg',
+        title2: 'buildings.png'
       },
       script: {
         gapi: 'https://apis.google.com/js/api.js'
