@@ -22,6 +22,9 @@ phina.main(function () {
         title1:'buisiness_people.jpeg',
         title2:'buildings.png'
       },
+      font: {
+        あさご本丸ゴシックmini: 'あさご本丸ゴシックmini.otf'
+      }
     },
     scenes: [
       {
