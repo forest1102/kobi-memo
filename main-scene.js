@@ -9,14 +9,14 @@ phina.define('MainScene', {
     sprite.addChildTo(personGroup)
     person.addChildTo(personGroup)
     personGroup.setPosition(this.gridX.center(), this.gridY.center())
-    personGroup.setScale(0.1, 0.1)
+    personGroup.setScale(0.15, 0.15)
     personGroup.alpha = 0
     personGroup.tweener
       .to({
         scaleX: 0.2,
         scaleY: 0.2,
         alpha: 1.0
-      }, 400)
+      }, 200)
       .wait(3000)
       .scaleTo(1.0, 8000)
       .play()
@@ -28,7 +28,7 @@ phina.define('MainScene', {
       fontFamily: "'Consolas', 'Monaco', 'あさご本丸ゴシックmini'",
     })
       .addChildTo(this)
-      .setPosition(this.gridX.center() * 0.3, this.gridY.center() * 1.8)
+      .setPosition(this.gridX.center() * 0.3, this.gridY.center() * 1.7)
     
     Label({
       text: 'さんです。',
@@ -37,11 +37,11 @@ phina.define('MainScene', {
       fontFamily: "'Consolas', 'Monaco', 'あさご本丸ゴシックmini'",
     })
       .addChildTo(this)
-      .setPosition(this.gridX.center() * 1.75, this.gridY.center() * 1.8)
+      .setPosition(this.gridX.center() * 1.75, this.gridY.center() * 1.7)
     
     Sprite('typeback')
       .addChildTo(this)
-      .setPosition(this.gridX.center(), this.gridY.center() * 1.8)
+      .setPosition(this.gridX.center(), this.gridY.center() * 1.7)
       .setScale(0.2, 0.2)
     
 

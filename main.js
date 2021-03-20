@@ -21,7 +21,7 @@ phina.main(function () {
         woman: 'main_woman.png',
         title1:'buisiness_people.jpeg',
         title2: 'buildings.png',
-        typeback: 'typing_back.jpeg'
+        typeback: 'typing_back.png'
       },
       font: {
         あさご本丸ゴシックmini: 'あさご本丸ゴシックmini.otf'
