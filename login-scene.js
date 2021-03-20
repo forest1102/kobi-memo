@@ -15,6 +15,7 @@ phina.define('LoginScene', {
       .setScale(0.2, 0.25)
 
     // ラベルを生成
+    //文字を緑色にする
     Label({
       text: 'こびうり', //テキスト内容
       fontSize: 50, //文字サイズ
@@ -22,7 +23,7 @@ phina.define('LoginScene', {
       fontFamily: "'Consolas', 'Monaco', 'あさご本丸ゴシックmini'", //フォント
     })
       .addChildTo(this)
-      .setPosition(this.gridX.center() * 0.39, this.gridY.center() * 0.39)
+      .setPosition(this.gridX.center() * 0.44, this.gridY.center() * 0.34)
       .setRotation(340)
 
 
@@ -33,7 +34,7 @@ phina.define('LoginScene', {
       fontFamily: "'Consolas', 'Monaco', 'あさご本丸ゴシックmini'", //フォント
     })
       .addChildTo(this)
-      .setPosition(this.gridX.center() * 0.4, this.gridY.center() * 0.4)
+      .setPosition(this.gridX.center() * 0.45, this.gridY.center() * 0.35)
       .setRotation(340)
 
 
@@ -44,7 +45,7 @@ phina.define('LoginScene', {
       fontFamily: "'Consolas', 'Monaco', 'あさご本丸ゴシックmini'", //フォント
     })
       .addChildTo(this)
-      .setPosition(this.gridX.center() * 0.49, this.gridY.center() * 0.59)
+      .setPosition(this.gridX.center() * 0.49, this.gridY.center() * 0.64)
       .setRotation(340)
 
     Label({
@@ -54,8 +55,20 @@ phina.define('LoginScene', {
       fontFamily: "'Consolas', 'Monaco', 'あさご本丸ゴシックmini'", //フォント
     })
       .addChildTo(this)
-      .setPosition(this.gridX.center() * 0.5, this.gridY.center() * 0.6)
+      .setPosition(this.gridX.center() * 0.5, this.gridY.center() * 0.65)
       .setRotation(340)
+
+    Label({
+      text: '・\t\t・', //テキスト内容
+      fontSize: 30, //文字サイズ
+      fill: '#83C5BE',　//文字塗りつぶし色
+    }).addChildTo(this).setPosition(this.gridX.center() * 0.26, this.gridY.center() * 0.27).setRotation(340)
+
+    Label({
+      text: '・\t\t・', //テキスト内容
+      fontSize: 30, //文字サイズ
+      fill: '#83C5BE',　//文字塗りつぶし色
+    }).addChildTo(this).setPosition(this.gridX.center() * 0.25, this.gridY.center() * 0.62).setRotation(340)
 
 
     //ログインボタンの設定
