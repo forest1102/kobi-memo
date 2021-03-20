@@ -1,9 +1,9 @@
 phina.define('MainScene', {
-  superClass: 'CanvasScene',
-  init: function() {
+  superClass: 'DisplayScene',
+  init() {
     this.superInit()
     // 背景色を指定
-    this.backgroundColor = '#444'
+    this.backgroundColor = '#3261ab'
     // ラベルを生成
     this.label = Label('Hello, phina.js!').addChildTo(this)
     this.label.x = this.gridX.center() // x 座標
