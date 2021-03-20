@@ -13,6 +13,7 @@ phina.main(function() {
     //screenのサイズ変更
     width: SCREEN_X,
     height: SCREEN_Y,
+
     scenes: [
       {
         className: 'TitleScene',
@@ -22,11 +23,11 @@ phina.main(function() {
       {
         className: 'LoginScene',
         label: 'login',
-        nextLabel: 'loading'
+        nextLabel: 'myloading'
       },
       {
-        className: 'LoadingScene',
-        label: 'loading',
+        className: 'MyLoadingScene',
+        label: 'myloading',
         nextLabel: 'main'
       },
       {
