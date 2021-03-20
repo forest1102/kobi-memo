@@ -20,7 +20,8 @@ phina.main(function () {
         man: 'main_man.png',
         woman: 'main_woman.png',
         title1:'buisiness_people.jpeg',
-        title2:'buildings.png'
+        title2: 'buildings.png',
+        typeback: 'typing_back.jpeg'
       },
       font: {
         あさご本丸ゴシックmini: 'あさご本丸ゴシックmini.otf'
