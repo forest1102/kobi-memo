@@ -25,15 +25,13 @@ phina.define('LoginScene', {
       fill: 'skyblue', // ボタン色
       stroke: 'pink', // 枠色
       strokeWidth: 5 // 枠太さ
-    }).addChildTo(this).setPosition(this.gridX.center(), this.gridY.center()*1.7)
+    }).addChildTo(this).setPosition(this.gridX.center(), this.gridY.center())
     //ボタンが押された時の処理
     button.onpointend = () => {
       this.exit({
         assets: {
           image: {
             face_1:
-              'https://rawgit.com/phinajs/phina.js/develop/assets/images/nasupiyo.png',
-            face_2:
               'https://rawgit.com/phinajs/phina.js/develop/assets/images/tomapiko.png'
           }
         }

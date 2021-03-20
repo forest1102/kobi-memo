@@ -1,4 +1,4 @@
-phina.define('LoadingScene', {
+phina.define('MyLoadingScene', {
   // デフォルトのLoadingSceneを継承
   superClass: 'phina.game.LoadingScene',
   // コンストラクタ
