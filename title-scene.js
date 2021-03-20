@@ -4,16 +4,16 @@ phina.define('TitleScene', {
     this.superInit(option)
     // 背景色を指定
     this.backgroundColor = '#EDF6F9'
-    // スプライト画像作成
+    // 画像作成
     Sprite('title1')
       .addChildTo(this)
       .setPosition(this.gridX.center(), this.gridY.center())
       .setScale(0.2, 0.2)
     Sprite('title2')
       .addChildTo(this)
-      .setPosition(this.gridX.center()*1.7, this.gridY.center()*1.5)
+      .setPosition(this.gridX.center()*1.7, this.gridY.center()*1.2)
       .setScale(0.2, 0.25)
-    
+
     // ラベルを生成
     Label({
       text: 'こびうり', //テキスト内容

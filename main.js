@@ -19,10 +19,8 @@ phina.main(function () {
         faceback: 'main_back.png',
         man: 'main_man.png',
         woman: 'main_woman.png',
-        title1:
-          'buisiness_people.jpeg',
-        title2:
-          'buildings.png'
+        title1:'buisiness_people.jpeg',
+        title2:'buildings.png'
       },
     },
     scenes: [
