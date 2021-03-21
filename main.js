@@ -5,9 +5,8 @@ phina.globalize()
 var SCREEN_X = 640
 var SCREEN_Y = 360
 
-
 // メイン処理
-phina.main(function () {
+phina.main(function() {
   // アプリケーション生成
   var app = GameApp({
     startLabel: 'title',
@@ -17,10 +16,9 @@ phina.main(function () {
     assets: {
       image: {
         faceback: 'main_back.png',
-        man: 'main_man.png',
         woman: 'main_woman.png',
         hukidashi: 'hukidashi.png',
-        title1:'buisiness_people.jpeg',
+        title1: 'buisiness_people.jpeg',
         title2: 'buildings.png',
         typeback: 'typing_back.png'
       },
@@ -28,9 +26,9 @@ phina.main(function () {
         あさご本丸ゴシックmini: 'あさご本丸ゴシックmini.otf'
       },
       sound: {
-        'push_sound': './push_sound.mp3',
-        'game_bgm1': './bgm1.mp3'
-      },
+        push_sound: './push_sound.mp3',
+        game_bgm1: './bgm1.mp3'
+      }
     },
 
     scenes: [
@@ -57,11 +55,11 @@ phina.main(function () {
   })
 
   app.domElement.addEventListener('touchend', function dummy() {
-    var s = phina.asset.Sound();
-    s.loadFromBuffer();
-    s.play().stop();
-    app.domElement.removeEventListener('touchend', dummy);
-  });
+    var s = phina.asset.Sound()
+    s.loadFromBuffer()
+    s.play().stop()
+    app.domElement.removeEventListener('touchend', dummy)
+  })
   // アプリケーション実行
   app.run()
 })
