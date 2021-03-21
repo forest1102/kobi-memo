@@ -3,6 +3,9 @@ phina.define('MyResultScene', {
     init(option) {
         this.superInit(option)
 
+        //BGM追加
+        SoundManager.stopMusic();
+        SoundManager.playMusic('game_bgm1');
         // 背景色を指定
         this.backgroundColor = '#FFDDD2'
         // 画像
