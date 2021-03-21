@@ -35,9 +35,26 @@ phina.define('MyResultScene', {
             fontFamily: "'Consolas', 'Monaco', 'あさご本丸ゴシックmini'", //フォント
         })
             .addChildTo(this)
-            .setPosition(this.gridX.center() * 1.8, this.gridY.center() * 1.3)
+            .setPosition(this.gridX.center() * 1.8, this.gridY.center() * 1.2)
 
-
-
+        var questionNum = 3
+        var correctNum = 3
+        Label({
+            text: correctNum+'/'+questionNum, //テキスト内容
+            fontSize: 64, //文字サイズ
+            fill: '#000000', //文字塗りつぶし色
+            fontFamily: "'Consolas', 'Monaco', 'あさご本丸ゴシックmini'", //フォント
+        })
+            .addChildTo(this)
+            .setPosition(this.gridX.center(), this.gridY.center() * 1.12)
+        
+        Label({
+            text: 'これであなたも出世コース！', //テキスト内容
+            fontSize: 27, //文字サイズ
+            fill: '#000000', //文字塗りつぶし色
+            fontFamily: "'Consolas', 'Monaco', 'あさご本丸ゴシックmini'", //フォント
+        })
+            .addChildTo(this)
+            .setPosition(this.gridX.center(), this.gridY.center() * 1.7)
     }
 })
