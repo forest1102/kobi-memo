@@ -1,13 +1,10 @@
 phina.define('MyLoadingScene', {
   // デフォルトのLoadingSceneを継承
-  superClass: 'phina.game.LoadingScene',
+  superClass: 'DisplayScene',
   // コンストラクタ
   init: function(option) {
     this.superInit(option)
     // メソッド上書き
-    this.gauge.onfull = () => {
-      // 次のシーンへ
-      this.exit()
-    }
+    const people = options.people
   }
 })
