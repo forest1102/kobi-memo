@@ -3,6 +3,8 @@ phina.define('MainScene', {
   init(option) {
     // 親クラス初期化
     this.superInit(option)
+    SoundManager.stopMusic()
+    SoundManager.playMusic('game_bgm2')
     var personGroup = DisplayElement().addChildTo(this)
     var sprite = Sprite('faceback')
     var person = Sprite(option.people[0].asset) //後ほど書き換え
