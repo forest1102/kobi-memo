@@ -2,6 +2,9 @@ phina.define('TitleScene', {
   superClass: 'DisplayScene',
   init(option) {
     this.superInit(option)
+    //BGM再生
+    SoundManager.setVolume(0.5)
+    SoundManager.play('game_bgm1')
     // 背景色を指定
     this.backgroundColor = '#EDF6F9'
     // 画像作成
@@ -58,11 +61,11 @@ phina.define('TitleScene', {
       .setPosition(this.gridX.center() * 0.5, this.gridY.center() * 0.65)
       .setRotation(340)
 
-      Label({
-        text: '・\t\t・', //テキスト内容
-        fontSize: 30, //文字サイズ
-        fill: '#83C5BE',　//文字塗りつぶし色
-      }).addChildTo(this).setPosition(this.gridX.center()*0.26, this.gridY.center()*0.27).setRotation(340)
+    Label({
+      text: '・\t\t・', //テキスト内容
+      fontSize: 30, //文字サイズ
+      fill: '#83C5BE',　//文字塗りつぶし色
+    }).addChildTo(this).setPosition(this.gridX.center() * 0.26, this.gridY.center() * 0.27).setRotation(340)
 
     Label({
       text: '・\t\t・', //テキスト内容
@@ -95,12 +98,11 @@ phina.define('TitleScene', {
       strokeWidth: 4
     }).addChildTo(this).setPosition(this.gridX.center() * 0.8, this.gridY.center() * 1.76)
 
-
-
     //ボタンが押された時の処理
     button.onpointend = () => {
+      SoundManager.setVolume(0.5)
+      SoundManager.play('push_sound')
       this.exit()
     }
-
   }
 })

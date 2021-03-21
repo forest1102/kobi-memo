@@ -25,8 +25,13 @@ phina.main(function () {
       },
       font: {
         あさご本丸ゴシックmini: 'あさご本丸ゴシックmini.otf'
-      }
+      },
+      sound: {
+        'push_sound': './push_sound.mp3',
+        'game_bgm1': './bgm1.mp3'
+      },
     },
+
     scenes: [
       {
         className: 'TitleScene',
@@ -49,6 +54,13 @@ phina.main(function () {
       }
     ]
   })
+
+  app.domElement.addEventListener('touchend', function dummy() {
+    var s = phina.asset.Sound();
+    s.loadFromBuffer();
+    s.play().stop();
+    app.domElement.removeEventListener('touchend', dummy);
+  });
   // アプリケーション実行
   app.run()
 })
