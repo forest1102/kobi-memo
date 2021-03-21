@@ -83,7 +83,7 @@ phina.define('LoginScene', {
       stroke: 'black', // 枠色
       strokeWidth: 5, // 枠太さ
       fontFamily: "'Consolas', 'Monaco', 'あさご本丸ゴシックmini'", //フォント
-    }).addChildTo(this).setPosition(this.gridX.center()*0.5, this.gridY.center() * 1.75)
+    }).addChildTo(this).setPosition(this.gridX.center() * 0.5, this.gridY.center() * 1.75)
 
     //ログインしないボタンの設定
     let button_unlogin = Button({
@@ -97,15 +97,18 @@ phina.define('LoginScene', {
       stroke: 'black', // 枠色
       strokeWidth: 5, // 枠太さ
       fontFamily: "'Consolas', 'Monaco', 'あさご本丸ゴシックmini'", //フォント
-    }).addChildTo(this).setPosition(this.gridX.center()*1.5, this.gridY.center() * 1.75)
+    }).addChildTo(this).setPosition(this.gridX.center() * 1.5, this.gridY.center() * 1.75)
 
     //ボタンが押された時の処理
     button_login.onpointend = () => {
+      SoundManager.setVolume(0.5)
+      SoundManager.play('push_sound')
       //森田さんのコマンド(Google Login)
     }
     button_unlogin.onpointend = () => {
+      SoundManager.setVolume(0.5)
+      SoundManager.play('push_sound')
       this.exit()
     }
-
   }
 })
