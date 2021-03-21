@@ -32,7 +32,8 @@ phina.main(function() {
       },
       sound: {
         push_sound: './push_sound.mp3',
-        game_bgm1: './bgm1.mp3'
+        game_bgm1: './bgm1.mp3',
+        game_bgm2: './bgm2.mp3',
       }
     },
 

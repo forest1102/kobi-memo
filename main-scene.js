@@ -2,6 +2,9 @@ phina.define('Person', {
   superClass: 'DisplayElement',
   init(option) {
     this.superInit(option)
+    SoundManager.stopMusic()
+    SoundManager.playMusic('game_bgm2')
+    var personGroup = DisplayElement().addChildTo(this)
     var sprite = Sprite('faceback')
     var person = Sprite(option.asset)
     sprite.addChildTo(this)
