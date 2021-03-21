@@ -21,7 +21,7 @@ phina.define('MainScene', {
         200
       )
       .wait(3000)
-      .scaleTo(1.0, 8000)
+      .scaleTo(0.8, 8000)
       .play()
 
     Label({

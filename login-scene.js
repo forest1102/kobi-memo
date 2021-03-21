@@ -118,12 +118,28 @@ phina.define('LoginScene', {
       this.exit({
         people: [
           {
-            kanji_name: '山田太郎',
-            romaji_name: 'yamadataro',
-            url: 'main_man.png',
-            company: '株式会社てきとー',
-            position: 'すごいえらい',
-            comment: 'つよつよ'
+            kanji_name: '楓博光',
+            romaji_name: 'kaedehiromitsu',
+            url: 'kaede_hiromitsu.png',
+            company: '株式会社サポーターズ',
+            position: '代表取締役',
+            comment: '技育とGeekはかかってます！'
+          },
+          {
+            kanji_name: '三浦雄典',
+            romaji_name: 'miurahironori',
+            url: 'miura_hironori.png',
+            company: '株式会社サポーターズ',
+            position: '???',
+            comment: 'キミたちの年齢が僕のエンジニア歴です'
+          },
+          {
+            kanji_name: '上野美菜子',
+            romaji_name: 'uenominako',
+            url: 'ueno_minako.png',
+            company: '株式会社サポーターズ',
+            position: '???',
+            comment: 'ニックネームは「なこ」です'
           }
         ]
       })
