@@ -8,6 +8,9 @@ var SCREEN_Y = 360
 // メイン処理
 phina.main(function() {
   // アプリケーション生成
+  let dom = document.createElement('div')
+
+  Scene.prototype.baseDom = dom
   var app = GameApp({
     startLabel: 'title',
     //screenのサイズ変更
@@ -70,4 +73,5 @@ phina.main(function() {
   })
   // アプリケーション実行
   app.run()
+  app.domElement.parentNode.insertBefore(dom, app.domElement.nextSibling)
 })
