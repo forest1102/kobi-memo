@@ -4,7 +4,7 @@ phina.define('TitleScene', {
     this.superInit(option)
     //BGM再生
     SoundManager.setVolume(0.5)
-    SoundManager.play('game_bgm1')
+    SoundManager.playMusic('game_bgm1')
     // 背景色を指定
     this.backgroundColor = '#EDF6F9'
     // 画像作成
