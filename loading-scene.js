@@ -5,15 +5,21 @@ phina.define('MyLoadingScene', {
   init: function(option) {
     this.superInit(option)
     // メソッド上書き
-    var label = phina.display
+    var loadingLabel = phina.display
       .Label({
         text: 'NOW LOADING...'
       })
       .addChildTo(this)
       .setPosition(this.width / 2, this.height * 0.2)
 
-    console.log('loading')
     var loader = phina.asset.AssetLoader()
+
+    var errorLabel = Label({
+      fill: 'red'
+    })
+      .addChildTo(this)
+      .setPosition(this.gridX.center(), this.gridY.center())
+      .hide()
 
     gapi.client.sheets.spreadsheets.values
       .get({
@@ -64,8 +70,6 @@ phina.define('MyLoadingScene', {
             )
         }
 
-        console.log(imgs)
-        loader.load(imgs)
         if (imgs.image === {}) {
           this.exit({ people })
         }
@@ -85,13 +89,15 @@ phina.define('MyLoadingScene', {
         //     var url = URL.createObjectURL(blob)
         //     var img = new Image()
         //     img.src = url
-        //     console.log(img)
         //     phina.asset.AssetManager.set('image', 'person-0', img)
         //     this.exit()
         //   })
       })
       .catch(response => {
-        console.log('Error: ' + response.result.error.message)
+        loadingLabel.hide()
+        errorLabel.text =
+          '読み込みエラー\nURLなどがあっているか確認してください'
+        errorLabel.show()
       })
   }
 })

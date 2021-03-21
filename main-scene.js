@@ -3,7 +3,6 @@ phina.define('MainScene', {
   init(option) {
     // 親クラス初期化
     this.superInit(option)
-    console.log('main scene')
     var sprite = Sprite('face-0')
     sprite.addChildTo(this)
     sprite.setPosition(this.gridX.center(), this.gridY.center())

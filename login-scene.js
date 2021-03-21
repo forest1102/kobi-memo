@@ -27,6 +27,12 @@ phina.define('LoginScene', {
     })
       .addChildTo(this)
       .setPosition(this.gridX.center(), this.gridY.center())
+    var errorLabel = Label({
+      fill: 'red'
+    })
+      .addChildTo(this)
+      .setPosition(this.gridX.center(), this.gridY.center())
+      .hide()
 
     //ボタンの設定
     var button_login = Button({
@@ -70,7 +76,8 @@ phina.define('LoginScene', {
             button_login.onpointend = handleAuthClick
           },
           error => {
-            console.log(error)
+            errorLabel.text = 'ログインエラー'
+            errorLabel.show()
           }
         )
     })
