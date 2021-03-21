@@ -42,7 +42,7 @@ phina.define('MainScene', {
     Sprite('typeback')
       .addChildTo(this)
       .setPosition(this.gridX.center(), this.gridY.center() * 1.7)
-      .setScale(0.2, 0.2)
+      .setScale(0.18, 0.18)
 
     // for(person of option.people){
     //   Sprite(person.image)
