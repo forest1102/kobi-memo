@@ -72,25 +72,20 @@ phina.define('MyLoadingScene', {
 
         if (imgs.image === {}) {
           this.exit({ people })
-        }
-        loader.onload = () => {
-          // Appコアにロード完了を伝える（==次のSceneへ移行）
-          this.exit({
-            people
-          })
+        } else {
+          loader.load(imgs)
+          loader.onload = () => {
+            console.log('loaded')
+            // Appコアにロード完了を伝える（==次のSceneへ移行）
+            this.exit({
+              people
+            })
+          }
         }
         // gapi.client.drive.files
         //   .get({
         //     fileId: people[0].id,
         //     alt: 'media'
-        //   })
-        //   .then(res => {
-        //     var blob = new Blob([res.Body], { type: 'image/jpg' })
-        //     var url = URL.createObjectURL(blob)
-        //     var img = new Image()
-        //     img.src = url
-        //     phina.asset.AssetManager.set('image', 'person-0', img)
-        //     this.exit()
         //   })
       })
       .catch(response => {

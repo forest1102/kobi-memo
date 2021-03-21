@@ -19,7 +19,7 @@ phina.define('LoginScene', {
     // 背景色を指定
     this.backgroundColor = '#444'
     // ラベルを生成
-    Label({
+    var label_login = Label({
       text: 'ログイン', //テキスト内容
       fontSize: 64, //文字サイズ
       fill: 'pink', //文字塗りつぶし色
@@ -55,7 +55,14 @@ phina.define('LoginScene', {
       }
     }
     function handleAuthClick(event) {
-      gapi.auth2.getAuthInstance().signIn()
+      gapi.auth2
+        .getAuthInstance()
+        .signIn()
+        .catch(error => {
+          label_login.hide()
+          errorLabel.text = 'ログインエラー'
+          errorLabel.show()
+        })
     }
 
     gapi.load('client:auth2', () => {
@@ -66,20 +73,20 @@ phina.define('LoginScene', {
           discoveryDocs: DISCOVERY_DOCS,
           scope: SCOPES
         })
-        .then(
-          () => {
-            // Listen for sign-in state changes.
-
-            gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus)
-            updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get())
-            // Handle the initial sign-in state.
-            button_login.onpointend = handleAuthClick
-          },
-          error => {
-            errorLabel.text = 'ログインエラー'
-            errorLabel.show()
-          }
-        )
+        .then(() => {
+          // Listen for sign-in state changes.
+          return gapi.auth2.getAuthInstance().signOut()
+        })
+        .then(() => {
+          gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus)
+          // Handle the initial sign-in state.
+          button_login.onpointend = handleAuthClick
+        })
+        .catch(error => {
+          label_login.hide()
+          errorLabel.text = 'ログインエラー'
+          errorLabel.show()
+        })
     })
   }
 })
