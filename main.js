@@ -18,7 +18,11 @@ phina.main(function() {
         man: 'main_man.png',
         woman: 'main_woman.png',
         title1: 'buisiness_people.jpeg',
-        title2: 'buildings.png'
+        title2: 'buildings.png',
+        typeback: 'typing_back.png'
+      },
+      font: {
+        あさご本丸ゴシックmini: 'あさご本丸ゴシックmini.otf'
       },
       script: {
         gapi: 'https://apis.google.com/js/api.js'
