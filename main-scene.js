@@ -67,7 +67,7 @@ phina.define('MainScene', {
     //   .addChildTo(this)
     //   .setPosition(this.gridX.center() * 1.5, this.gridY.span(2))
     //   .setScale(0.15, 0.15)
-    this.input = this.createInput(300, 140, 240)
+    this.input = this.createInput(400, 636, 426)
     this.people = option.people
     this.curIdx = 0
     // var typeback = Sprite('typeback')
@@ -82,6 +82,7 @@ phina.define('MainScene', {
         ++this.curIdx
         console.log(this.curIdx)
         if (this.people.length === this.curIdx) {
+          this.input.remove()
           this.exit({
             num: this.curIdx,
             max: this.people.length
@@ -114,9 +115,10 @@ phina.define('MainScene', {
     s.left = l + 'px'
     s.top = t + 'px'
     s.fontSize = '42px'
-    s.backgroundColor = '#000000'
-    s.color = '#ffffff'
-    s.border = '2px solid #ffffff'
+    s.backgroundColor = '#E29578'
+    s.color = '#000'
+    s.border = '2px solid #000'
+    s.borderRadius = '30px'
     dom.appendChild(input)
     s.overflowY = 'hidden'
 
