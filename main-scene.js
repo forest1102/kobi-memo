@@ -79,9 +79,12 @@ phina.define('MainScene', {
         ++this.curIdx
         console.log(this.curIdx)
         if (this.people.length === this.curIdx) {
-          --this.curIdx
-          console.log('Finish')
+          this.exit({
+            num: this.curIdx,
+            max: this.people.length
+          })
         } else {
+          this.input.value = ''
           this.person.remove()
           this.person = Person(this.people[this.curIdx])
             .setPosition(this.gridX.center(), this.gridY.center())
