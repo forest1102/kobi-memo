@@ -23,6 +23,9 @@ phina.define('MainScene', {
       .wait(3000)
       .scaleTo(0.8, 8000)
       .play()
+    
+    personGroup.target.remove()
+    // personGroup.hide()
 
     Label({
       text: 'この方は',
