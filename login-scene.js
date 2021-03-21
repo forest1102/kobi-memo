@@ -126,7 +126,7 @@ phina.define('LoginScene', {
             comment: '技育とGeekはかかってます！'
           },
           {
-            kanji_name: '三浦雄典',
+            kanji_name: '三浦裕典',
             romaji_name: 'miurahironori',
             url: 'miura_hironori.jpeg',
             company: '株式会社サポーターズ',
