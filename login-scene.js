@@ -128,7 +128,7 @@ phina.define('LoginScene', {
           {
             kanji_name: '三浦雄典',
             romaji_name: 'miurahironori',
-            url: 'miura_hironori.png',
+            url: 'miura_hironori.jpeg',
             company: '株式会社サポーターズ',
             position: '???',
             comment: 'キミたちの年齢が僕のエンジニア歴です'
