@@ -17,14 +17,20 @@ phina.main(function() {
       image: {
         faceback: 'main_back.png',
         woman: 'main_woman.png',
+        hukidashi: 'hukidashi.png',
         title1: 'buisiness_people.jpeg',
         title2: 'buildings.png',
         typeback: 'typing_back.png'
       },
       font: {
         あさご本丸ゴシックmini: 'あさご本丸ゴシックmini.otf'
+      },
+      sound: {
+        push_sound: './push_sound.mp3',
+        game_bgm1: './bgm1.mp3'
       }
     },
+
     scenes: [
       {
         className: 'TitleScene',
@@ -46,6 +52,13 @@ phina.main(function() {
         label: 'main'
       }
     ]
+  })
+
+  app.domElement.addEventListener('touchend', function dummy() {
+    var s = phina.asset.Sound()
+    s.loadFromBuffer()
+    s.play().stop()
+    app.domElement.removeEventListener('touchend', dummy)
   })
   // アプリケーション実行
   app.run()

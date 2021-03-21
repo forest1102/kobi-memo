@@ -108,9 +108,13 @@ phina.define('LoginScene', {
 
     //ボタンが押された時の処理
     button_login.onpointend = () => {
+      SoundManager.setVolume(0.5)
+      SoundManager.play('push_sound')
       //森田さんのコマンド(Google Login)
     }
     button_unlogin.onpointend = () => {
+      SoundManager.setVolume(0.5)
+      SoundManager.play('push_sound')
       this.exit({
         people: [
           {
