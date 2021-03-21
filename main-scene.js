@@ -69,5 +69,9 @@ phina.define('MainScene', {
     //   .addChildTo(this)
     //   .setPosition(this.gridX.center() * 1.5, this.gridY.span(2))
     //   .setScale(0.15, 0.15)
+
+    this.onpointend = () => {
+      this.exit()
+    }
   }
 })

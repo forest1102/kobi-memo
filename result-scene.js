@@ -1,4 +1,4 @@
-phina.define('TitleScene', {
+phina.define('MyResultScene', {
     superClass: 'DisplayScene',
     init(option) {
         this.superInit(option)
