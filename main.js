@@ -20,7 +20,9 @@ phina.main(function() {
         woman: 'main_woman.png',
         title1: 'buisiness_people.jpeg',
         title2: 'buildings.png',
-        typeback: 'typing_back.png'
+        typeback: 'typing_back.png',
+        hare: 'result_hare.png',
+        hirameki: 'result_hirameki.png'
       },
       font: {
         あさご本丸ゴシックmini: 'あさご本丸ゴシックmini.otf'
@@ -49,7 +51,12 @@ phina.main(function() {
       },
       {
         className: 'MainScene',
-        label: 'main'
+        label: 'main',
+        nextLabel: 'myresult'
+      },
+      {
+        className: 'MyResultScene',
+        label: 'myresult'
       }
     ]
   })
