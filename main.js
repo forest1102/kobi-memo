@@ -5,9 +5,8 @@ phina.globalize()
 var SCREEN_X = 640
 var SCREEN_Y = 360
 
-
 // メイン処理
-phina.main(function () {
+phina.main(function() {
   // アプリケーション生成
   var app = GameApp({
     startLabel: 'title',
@@ -17,9 +16,8 @@ phina.main(function () {
     assets: {
       image: {
         faceback: 'main_back.png',
-        man: 'main_man.png',
         woman: 'main_woman.png',
-        title1:'buisiness_people.jpeg',
+        title1: 'buisiness_people.jpeg',
         title2: 'buildings.png',
         typeback: 'typing_back.png'
       },

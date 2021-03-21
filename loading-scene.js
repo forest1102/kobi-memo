@@ -5,6 +5,26 @@ phina.define('MyLoadingScene', {
   init: function(option) {
     this.superInit(option)
     // メソッド上書き
-    const people = options.people
+    const people = option.people
+    const loader = phina.asset.AssetLoader()
+    const assets = {}
+    people
+      .filter(cur => cur.id || cur.url)
+      .forEach((person, i) => {
+        assets.image['face-' + i] = cur.url
+        people[i].asset = 'face-' + i
+      })
+
+    if (assets.image === {}) {
+      this.exit({ people })
+    } else {
+      loader.load(assets)
+      loader.onload = () => {
+        console.log('loaded')
+        this.exit({
+          people
+        })
+      }
+    }
   }
 })
