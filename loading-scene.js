@@ -7,11 +7,11 @@ phina.define('MyLoadingScene', {
     // メソッド上書き
     const people = option.people
     const loader = phina.asset.AssetLoader()
-    const assets = {}
+    const assets = { image: {} }
     people
       .filter(cur => cur.id || cur.url)
       .forEach((person, i) => {
-        assets.image['face-' + i] = cur.url
+        assets.image['face-' + i] = person.url
         people[i].asset = 'face-' + i
       })
 
