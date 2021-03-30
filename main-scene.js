@@ -67,7 +67,7 @@ phina.define('MainScene', {
     //   .addChildTo(this)
     //   .setPosition(this.gridX.center() * 1.5, this.gridY.span(2))
     //   .setScale(0.15, 0.15)
-    this.input = this.createInput(400, 636, 426)
+    this.input = this.createInput('30rem', '30%', '70%')
     this.people = option.people
     this.curIdx = 0
     // var typeback = Sprite('typeback')
@@ -108,15 +108,16 @@ phina.define('MainScene', {
     input.getAttribute('text')
     // スタイルを設定
     let s = input.style
-    s.width = `${w}px`
+    s.width = w
     s.height = '60px'
     s.position = 'absolute'
     s.margin = '8px'
-    s.left = l + 'px'
-    s.top = t + 'px'
+    s.left = l
+    s.top = t
     s.fontSize = '42px'
     s.backgroundColor = '#E29578'
     s.color = '#000'
+    s.textAlign = 'center'
     s.border = '2px solid #000'
     s.borderRadius = '30px'
     dom.appendChild(input)
